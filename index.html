@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1>🧠 Memory Card Game</h1>
+            <p class="subtitle">Match the cards to win!</p>
+        </header>
+        <div class="game-stats">
+            <div class="stat-item">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-content">
+                    <span class="stat-label">Moves</span>
+                    <span class="stat-value" id="moves">0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-content">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="time">0s</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-content">
+                    <span class="stat-label">Best</span>
+                    <span class="stat-value" id="best-score">--</span>
+                </div>
+            </div>
+        </div>
+        <div class="game-controls">
+            <button id="restart" class="btn btn-primary">
+                <span class="btn-icon">🔄</span>
+                New Game
+            </button>
+            <button id="hint" class="btn btn-secondary">
+                <span class="btn-icon">💡</span>
+                Hint
+            </button>
+            <button id="theme-toggle" class="btn btn-accent">
+                <span class="btn-icon">🎨</span>
+                Theme
+            </button>
+            <button id="difficulty-toggle" class="btn btn-accent">
+                <span class="btn-icon">⚡</span>
+                <span id="difficulty-text">Easy</span>
+            </button>
+        </div>
+
+        <div class="game-board" id="game-board"></div>
+
+        <div class="game-message" id="game-message"></div>
+
+        <!-- Particle effects container -->
+        <div id="particles-container"></div>
+
+        <!-- Sound controls -->
+        <div class="sound-controls">
+            <button id="sound-toggle" class="btn btn-sound">
+                <span class="btn-icon">🔊</span>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
